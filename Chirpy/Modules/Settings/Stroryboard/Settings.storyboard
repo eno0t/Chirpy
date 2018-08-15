@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Настройки-->
+        <scene sceneID="5UB-xc-tAY">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" title="Настройки" id="48x-G6-Qjd" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wHJ-Ig-eSI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b6d-e8-lQt">
+                                <rect key="frame" x="286" y="328" width="51" height="31"/>
+                                <connections>
+                                    <action selector="actionSwitchImage:" destination="48x-G6-Qjd" eventType="valueChanged" id="Mbs-rI-4W7"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Включить отображение изображений" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcG-SW-i6o">
+                                <rect key="frame" x="40" y="321" width="206" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="DQN-hR-vUK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WcG-SW-i6o" firstAttribute="centerY" secondItem="b6d-e8-lQt" secondAttribute="centerY" id="16x-si-eTH"/>
+                            <constraint firstItem="b6d-e8-lQt" firstAttribute="leading" secondItem="WcG-SW-i6o" secondAttribute="trailing" constant="40" id="Ey8-0b-mwa"/>
+                            <constraint firstItem="b6d-e8-lQt" firstAttribute="centerY" secondItem="aRt-7Z-1DX" secondAttribute="centerY" id="TE2-lv-WQr"/>
+                            <constraint firstItem="WcG-SW-i6o" firstAttribute="leading" secondItem="aRt-7Z-1DX" secondAttribute="leading" constant="40" id="bti-L7-0pi"/>
+                            <constraint firstItem="aRt-7Z-1DX" firstAttribute="trailing" secondItem="b6d-e8-lQt" secondAttribute="trailing" constant="40" id="rMd-IA-lrA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aRt-7Z-1DX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Настройки" id="oVK-yl-ljZ"/>
+                    <connections>
+                        <outlet property="switchImage" destination="b6d-e8-lQt" id="zPK-bz-Ztt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMK-u8-gUu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+</document>
